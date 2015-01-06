@@ -9,5 +9,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Screenmedia.JazzHands.Droid.Demo MonoForAntroid.PreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.Demo.Screenmedia.JazzHands.Droid.Demo MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>

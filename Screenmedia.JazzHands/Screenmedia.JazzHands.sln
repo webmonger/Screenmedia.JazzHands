@@ -1,15 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Core", "Core\Screenmedia.JazzHands.Core.csproj", "{47C7D9BF-4A91-4165-AE02-1B19566761F9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{5DD37147-B962-4A94-87DD-2C7D018DB193}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Touch", "Touch\Screenmedia.JazzHands.Touch.csproj", "{BF7960BF-6041-4533-88D6-36286D7459D5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.TouchDemo", "TouchDemo\Screenmedia.JazzHands.TouchDemo.csproj", "{A5851FBE-820F-4DF7-967D-7D25C4C71EB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Core", "Screenmedia.JazzHands.Core\Screenmedia.JazzHands.Core.csproj", "{47C7D9BF-4A91-4165-AE02-1B19566761F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Droid", "Screenmedia.JazzHands.Droid\Screenmedia.JazzHands.Droid.csproj", "{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Touch", "Screenmedia.JazzHands.Touch\Screenmedia.JazzHands.Touch.csproj", "{BF7960BF-6041-4533-88D6-36286D7459D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{D6A45933-D0DC-48DA-8184-6996FFBE693E}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Droid.Demo", "Screenmedia.JazzHands.Droid.Demo\Screenmedia.JazzHands.Droid.Demo.csproj", "{12DDE312-AFFD-4152-B302-D70DB5D46191}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.TouchDemo", "Screenmedia.JazzHands.TouchDemo\Screenmedia.JazzHands.TouchDemo.csproj", "{A5851FBE-820F-4DF7-967D-7D25C4C71EB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,7 +108,14 @@ Global
 		{BF7960BF-6041-4533-88D6-36286D7459D5}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{BF7960BF-6041-4533-88D6-36286D7459D5}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{47C7D9BF-4A91-4165-AE02-1B19566761F9} = {5DD37147-B962-4A94-87DD-2C7D018DB193}
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F} = {5DD37147-B962-4A94-87DD-2C7D018DB193}
+		{BF7960BF-6041-4533-88D6-36286D7459D5} = {5DD37147-B962-4A94-87DD-2C7D018DB193}
+		{12DDE312-AFFD-4152-B302-D70DB5D46191} = {D6A45933-D0DC-48DA-8184-6996FFBE693E}
+		{A5851FBE-820F-4DF7-967D-7D25C4C71EB7} = {D6A45933-D0DC-48DA-8184-6996FFBE693E}
+	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Screenmedia.JazzHands.Droid.Demo\Screenmedia.JazzHands.Droid.Demo.csproj
+		StartupItem = Screenmedia.JazzHands.TouchDemo\Screenmedia.JazzHands.TouchDemo.csproj
 	EndGlobalSection
 EndGlobal

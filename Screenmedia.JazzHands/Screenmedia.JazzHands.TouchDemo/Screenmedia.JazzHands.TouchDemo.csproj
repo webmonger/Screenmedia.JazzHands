@@ -120,11 +120,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Core\Screenmedia.JazzHands.Core.csproj">
+    <ProjectReference Include="..\Screenmedia.JazzHands.Core\Screenmedia.JazzHands.Core.csproj">
       <Project>{47C7D9BF-4A91-4165-AE02-1B19566761F9}</Project>
       <Name>Screenmedia.JazzHands.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Touch\Screenmedia.JazzHands.Touch.csproj">
+    <ProjectReference Include="..\Screenmedia.JazzHands.Touch\Screenmedia.JazzHands.Touch.csproj">
       <Project>{BF7960BF-6041-4533-88D6-36286D7459D5}</Project>
       <Name>Screenmedia.JazzHands.Touch</Name>
     </ProjectReference>
