@@ -10,8 +10,13 @@ namespace Screenmedia.JazzHands.Touch
 {
     public class FrameAnimation : Animation
     {
-        public FrameAnimation(UIView view) : base(view)
+        
+
+		protected UIView View;
+
+		public FrameAnimation(UIView view) : base()
         {
+			View = view;
         }
 
 		public override void Animate(int time)
@@ -19,7 +24,7 @@ namespace Screenmedia.JazzHands.Touch
             if (KeyFrames.Count() <= 1)
                 return;
 
-            AnimationFrame animationFrame = AnimationFrameForTime(time);
+			AnimationFrame animationFrame = AnimationFrameForTime(time) as AnimationFrame;
 
             // Store the current transform
             CGAffineTransform tempTransform = View.Transform;
@@ -32,26 +37,28 @@ namespace Screenmedia.JazzHands.Touch
             View.Transform = tempTransform;
         }
 
-		public override AnimationFrame FrameForTime(int time,
-            AnimationKeyFrame startKeyFrame,
-            AnimationKeyFrame endKeyFrame)
-        {
-            int startTime = startKeyFrame.Time;
-            int endTime = endKeyFrame.Time;
-            RectangleF startLocation = startKeyFrame.Frame;
-            RectangleF endLocation = endKeyFrame.Frame;
+		public override AnimationFrameBase FrameForTime (int time, AnimationFrameBase startKeyFrameBase, AnimationFrameBase endKeyFrameBase)
+		{
+            
+			var startKeyFrame = startKeyFrameBase as AnimationFrame;
+			var endKeyFrame = endKeyFrameBase as AnimationFrame;
 
-            RectangleF frame = View.Frame;
+			int startTime = startKeyFrame.Time;
+            int endTime = endKeyFrame.Time;
+			CGRect startLocation = startKeyFrame.Frame;
+			CGRect endLocation = endKeyFrame.Frame;
+
+			CGRect frame = View.Frame;
             frame.Location =
                 new PointF(
-                    TweenValueForStartTime(startTime, endTime, startLocation.GetMinX(), endLocation.GetMinX(), time),
-                    TweenValueForStartTime(startTime, endTime, startLocation.GetMinY(), endLocation.GetMinY(), time));
+					TweenValueForStartTime(startTime, endTime, (Single) startLocation.GetMinX(), (Single) endLocation.GetMinX(), time),
+					TweenValueForStartTime(startTime, endTime, (Single) startLocation.GetMinY(), (Single) endLocation.GetMinY(), time));
             frame.Size =
-                new SizeF(TweenValueForStartTime(startTime, endTime, startLocation.Width, endLocation.Width, time),
-                    TweenValueForStartTime(startTime, endTime, startLocation.Height, endLocation.Height, time));
+				new SizeF(TweenValueForStartTime(startTime, endTime, (Single) startLocation.Width, (Single) endLocation.Width, time),
+					TweenValueForStartTime(startTime, endTime, (Single) startLocation.Height, (Single) endLocation.Height, time));
 
             AnimationFrame animationFrame = new AnimationFrame();
-            animationFrame.Frame = frame;
+			animationFrame.Frame = frame;
 
             return animationFrame;
         }

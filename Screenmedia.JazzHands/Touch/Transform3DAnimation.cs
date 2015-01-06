@@ -12,10 +12,12 @@ namespace Screenmedia.JazzHands.Touch
 	public class Transform3DAnimation : Animation
 	{
 	    private readonly float _m34;
+		protected UIView View;
 
-	    public Transform3DAnimation(UIView view, float m34) : base(view)
+	    public Transform3DAnimation(UIView view, float m34) : base()
 	    {
 	        _m34 = m34;
+			View = view;
 	    }
 
 	    public override void Animate(int time)
@@ -23,7 +25,7 @@ namespace Screenmedia.JazzHands.Touch
 			if (KeyFrames.Count () <= 1)
 				return;
 
-			AnimationFrame aFrame = AnimationFrameForTime (time);
+			AnimationFrame aFrame = (AnimationFrame) AnimationFrameForTime (time);
 			if (aFrame.Transform == null)
 				return;
 
@@ -66,10 +68,12 @@ namespace Screenmedia.JazzHands.Touch
 		}
 
 
-	    public override AnimationFrame FrameForTime(int time,
-            AnimationKeyFrame startKeyFrame,
-            AnimationKeyFrame endKeyFrame)
-        {
+		public override AnimationFrameBase FrameForTime (int time, AnimationFrameBase startKeyFrameBase, AnimationFrameBase endKeyFrameBase)
+		{
+
+			var startKeyFrame = startKeyFrameBase as AnimationFrame;
+			var endKeyFrame = endKeyFrameBase as AnimationFrame;
+
 			AnimationFrame animationFrame = new AnimationFrame();
 			animationFrame.Transform = new Transform3D();
 			animationFrame.Transform.M34 = startKeyFrame.Transform.M34;

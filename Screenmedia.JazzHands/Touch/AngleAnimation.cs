@@ -22,13 +22,11 @@ namespace Screenmedia.JazzHands.Touch
 		{
 			if (KeyFrames.Count() <= 1) return;
 
-			AnimationFrame animationFrame = AnimationFrameForTime(time);
+			var animationFrame = AnimationFrameForTime(time);
 			View.Transform = CGAffineTransform.MakeRotation(animationFrame.Angle);
 		}
 
-		public override AnimationFrame FrameForTime(int time,
-			AnimationKeyFrame startKeyFrame,
-			AnimationKeyFrame endKeyFrame)
+		public override AnimationFrameBase FrameForTime (int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame)
 		{
 			AnimationFrame animationFrame = new AnimationFrame ();
 			animationFrame.Angle = TweenValueForStartTime (startKeyFrame.Time,

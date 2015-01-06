@@ -9,9 +9,9 @@ namespace Screenmedia.JazzHands.Core
 	public class Animation
 	{
 		//protected View AnimView;
-		protected List<AnimationKeyFrame> KeyFrames;
+		protected List<AnimationFrameBase> KeyFrames;
 
-		private List<AnimationFrame> _timeline;
+		private List<AnimationFrameBase> _timeline;
 		// AnimationFrames
 		private int _startTime;
 		// in case timeline starts before t=0
@@ -25,19 +25,19 @@ namespace Screenmedia.JazzHands.Core
 
 		private void InitAnimation ()
 		{
-			KeyFrames = new List<AnimationKeyFrame> ();
-			_timeline = new List<AnimationFrame> ();
+			KeyFrames = new List<AnimationFrameBase> ();
+			_timeline = new List<AnimationFrameBase> ();
 			_startTime = 0;
 		}
 
-		public void AddKeyFrames (List<AnimationKeyFrame> keyFrames)
+		public void AddKeyFrames (List<AnimationFrameBase> keyFrames)
 		{
-			foreach (AnimationKeyFrame keyFrame in keyFrames) {
+			foreach (AnimationFrameBase keyFrame in keyFrames) {
 				AddKeyFrame (keyFrame);
 			}
 		}
 
-		public void AddKeyFrame (AnimationKeyFrame keyFrame)
+		public void AddKeyFrame (AnimationFrameBase keyFrame)
 		{
 
 			Debug.WriteLine (string.Format ("Add KeyFrame Time: {0}", keyFrame.Time));
@@ -48,38 +48,38 @@ namespace Screenmedia.JazzHands.Core
 			}
 
 			// because folks might add keyframes out of order, we have to sort here
-			if (keyFrame.Time > ((AnimationKeyFrame)KeyFrames.Last ()).Time) {
+			if (keyFrame.Time > ((AnimationFrameBase)KeyFrames.Last ()).Time) {
 				KeyFrames.Add (keyFrame);
 			} else {
 				for (int i = 0; i < KeyFrames.Count (); i++) {
-					if (keyFrame.Time < ((AnimationKeyFrame)KeyFrames [i]).Time) {
+					if (keyFrame.Time < ((AnimationFrameBase)KeyFrames [i]).Time) {
 						KeyFrames.Add (keyFrame);// TODO atIndex:i;
 						break;
 					}
 				}
 			}
 
-			_timeline = new List<AnimationFrame> ();
+			_timeline = new List<AnimationFrameBase> ();
 			for (int i = 0; i < KeyFrames.Count () - 1; i++) {
-				AnimationKeyFrame currentKeyFrame = KeyFrames [i];
-				AnimationKeyFrame nextKeyFrame = KeyFrames [i + 1];
+				AnimationFrameBase currentKeyFrame = KeyFrames [i];
+				AnimationFrameBase nextKeyFrame = KeyFrames [i + 1];
 
 				for (int j = currentKeyFrame.Time + (i == 0 ? 0 : 1); j <= nextKeyFrame.Time; j++) {
 					_timeline.Add (FrameForTime (j, currentKeyFrame, nextKeyFrame));
 				}
 			}
-			_startTime = ((AnimationKeyFrame)KeyFrames [0]).Time;
+			_startTime = ((AnimationFrameBase)KeyFrames [0]).Time;
 		}
 
-		public virtual AnimationFrame FrameForTime (int time,
-		                                             AnimationKeyFrame startKeyFrame,
-		                                             AnimationKeyFrame endKeyFrame)
+		public virtual AnimationFrameBase FrameForTime (int time,
+			AnimationFrameBase startKeyFrame,
+			AnimationFrameBase endKeyFrame)
 		{
 			Debug.WriteLine ("Hey pal! You need to use a subclass of IFTTTAnimation.");
 			return startKeyFrame;
 		}
 
-		public AnimationFrame AnimationFrameForTime (int time)
+		public AnimationFrameBase AnimationFrameForTime (int time)
 		{
 			if (time < _startTime) {
 				return _timeline [0];

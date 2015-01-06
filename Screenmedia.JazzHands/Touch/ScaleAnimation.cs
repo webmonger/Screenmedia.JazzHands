@@ -8,22 +8,24 @@ namespace Screenmedia.JazzHands.Touch
 {
 	public class ScaleAnimation : Animation
 	{
-		public ScaleAnimation (UIView view) : base(view)
+
+		protected UIView View;
+
+		public ScaleAnimation (UIView view) : base()
 		{
+			View = view;
 		}
 
 		public override void Animate(int time)
 		{
 			if (KeyFrames.Count <= 1) return;
 
-			AnimationFrame animationFrame = AnimationFrameForTime(time);
+			AnimationFrame animationFrame = (AnimationFrame) AnimationFrameForTime(time);
 			float scale = animationFrame.Scale;
 			View.Transform = CGAffineTransform.MakeScale (scale, scale);
 		}
 
-		public override AnimationFrame FrameForTime(int time,
-			AnimationKeyFrame startKeyFrame,
-			AnimationKeyFrame endKeyFrame)
+		public override AnimationFrameBase FrameForTime (int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame)
 		{
 			AnimationFrame animationFrame = new AnimationFrame ();
 			animationFrame.Scale = TweenValueForStartTime (startKeyFrame.Time,

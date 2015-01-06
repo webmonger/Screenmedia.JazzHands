@@ -7,21 +7,24 @@ namespace Screenmedia.JazzHands.Touch
 {
 	public class HideAnimation : Animation
 	{
-		public HideAnimation (UIView view, int time) : base(view)
+
+		protected UIView View;
+
+		public HideAnimation (UIView view, int time) : base()
 		{
+			View = view;
+
 		}
 
 		public override void Animate(int time)
 		{
 			if (KeyFrames.Count <= 1) return;
 
-			AnimationFrame animationFrame = AnimationFrameForTime(time);
+			AnimationFrame animationFrame = (AnimationFrame) AnimationFrameForTime(time);
 			View.Hidden = animationFrame.Hidden;
 		}
 
-		public override AnimationFrame FrameForTime(int time,
-			AnimationKeyFrame startKeyFrame,
-			AnimationKeyFrame endKeyFrame)
+		public override AnimationFrameBase FrameForTime (int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame)
 		{
 			AnimationFrame animationFrame = new AnimationFrame ();
 			animationFrame.Hidden = (time == startKeyFrame.Time ? startKeyFrame : endKeyFrame).Hidden;

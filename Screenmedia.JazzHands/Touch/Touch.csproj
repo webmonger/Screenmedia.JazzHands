@@ -42,9 +42,7 @@
     <Compile Include="AlphaAnimation.cs" />
     <Compile Include="AngleAnimation.cs" />
     <Compile Include="AnimatedScrollViewController.cs" />
-    <Compile Include="Animation.cs" />
     <Compile Include="AnimationFrame.cs" />
-    <Compile Include="AnimationKeyFrame.cs" />
     <Compile Include="Animator.cs" />
     <Compile Include="ColorAnimation.cs" />
     <Compile Include="FrameAnimation.cs" />

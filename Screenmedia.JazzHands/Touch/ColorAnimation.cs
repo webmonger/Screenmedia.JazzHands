@@ -19,15 +19,17 @@ namespace Screenmedia.JazzHands.Touch
 		{
 			if (KeyFrames.Count() <= 1) return;
 
-			AnimationFrame animationFrame = AnimationFrameForTime(time);
+			AnimationFrame animationFrame = AnimationFrameForTime(time) as AnimationFrame;
 			View.BackgroundColor = animationFrame.Color;
 		
 		}
 
-		public override AnimationFrame FrameForTime(int time,
-			AnimationKeyFrame startKeyFrame,
-			AnimationKeyFrame endKeyFrame)
+		public override AnimationFrameBase FrameForTime (int time, AnimationFrameBase startKeyFrameBase, AnimationFrameBase endKeyFrameBase)
 		{
+
+			var startKeyFrame = startKeyFrameBase as AnimationFrame;
+			var endKeyFrame = endKeyFrameBase as AnimationFrame;
+
 			AnimationFrame animationFrame = new AnimationFrame ();
 			float startRed = 0.0f, startBlue = 0.0f, startGreen = 0.0f, startAlpha = 0.0f;
 			float endRed = 0.0f, endBlue = 0.0f, endGreen = 0.0f, endAlpha = 0.0f;
@@ -44,8 +46,9 @@ namespace Screenmedia.JazzHands.Touch
 			return animationFrame;
 		}
 
-		private bool GetRed(float red, float green, float blue, float alpha, UIColor color) {
-			float white;
+		private bool GetRed(nfloat red, nfloat green, nfloat blue, nfloat alpha, UIColor color) {
+
+			nfloat white;
 
 			color.GetRGBA (out red, out green, out blue, out alpha);
 
