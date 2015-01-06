@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{47C7D9BF-4A91-4165-AE02-1B19566761F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Core", "Core\Screenmedia.JazzHands.Core.csproj", "{47C7D9BF-4A91-4165-AE02-1B19566761F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Touch", "Touch\Touch.csproj", "{BF7960BF-6041-4533-88D6-36286D7459D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Touch", "Touch\Screenmedia.JazzHands.Touch.csproj", "{BF7960BF-6041-4533-88D6-36286D7459D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchDemo", "TouchDemo\TouchDemo.csproj", "{A5851FBE-820F-4DF7-967D-7D25C4C71EB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.TouchDemo", "TouchDemo\Screenmedia.JazzHands.TouchDemo.csproj", "{A5851FBE-820F-4DF7-967D-7D25C4C71EB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Droid", "Screenmedia.JazzHands.Droid\Screenmedia.JazzHands.Droid.csproj", "{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.DroidDemo", "Screenmedia.JazzHands.DroidDemo\Screenmedia.JazzHands.DroidDemo.csproj", "{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,38 @@ Global
 		AppStore|iPhone = AppStore|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Release|iPhone.Build.0 = Release|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Release|iPhone.Build.0 = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{2BC54E95-96A2-4EBC-AE13-6DADF4D4AD4C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{47C7D9BF-4A91-4165-AE02-1B19566761F9}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
 		{47C7D9BF-4A91-4165-AE02-1B19566761F9}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
 		{47C7D9BF-4A91-4165-AE02-1B19566761F9}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
@@ -69,6 +105,6 @@ Global
 		{BF7960BF-6041-4533-88D6-36286D7459D5}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = TouchDemo\TouchDemo.csproj
+		StartupItem = TouchDemo\Screenmedia.JazzHands.TouchDemo.csproj
 	EndGlobalSection
 EndGlobal
