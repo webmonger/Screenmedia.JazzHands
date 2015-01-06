@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{BF7960BF-6041-4533-88D6-36286D7459D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Screenmedia.JazzHands.Touch</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Touch</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AlphaAnimation.cs" />
+    <Compile Include="AngleAnimation.cs" />
+    <Compile Include="AnimatedScrollViewController.cs" />
+    <Compile Include="AnimationFrame.cs" />
+    <Compile Include="Animator.cs" />
+    <Compile Include="ColorAnimation.cs" />
+    <Compile Include="FrameAnimation.cs" />
+    <Compile Include="HideAnimation.cs" />
+    <Compile Include="JazzHands.cs" />
+    <Compile Include="ScaleAnimation.cs" />
+    <Compile Include="Transform3D.cs" />
+    <Compile Include="Transform3DAnimation.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Screenmedia.JazzHands.Core\Screenmedia.JazzHands.Core.csproj">
+      <Project>{47C7D9BF-4A91-4165-AE02-1B19566761F9}</Project>
+      <Name>Screenmedia.JazzHands.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
