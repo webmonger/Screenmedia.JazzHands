@@ -45,7 +45,6 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="AlphaAnimation.cs" />
     <Compile Include="AngleAnimation.cs" />
-    <Compile Include="Animation.cs" />
     <Compile Include="AnimationFrame.cs" />
     <Compile Include="Animator.cs" />
     <Compile Include="AttributeAnimation.cs" />
