@@ -15,6 +15,12 @@
   </metadata>
 
   <files>
-    <file src="build/**/*.*" target="lib" />
+     <!--Xamarin.Android-->
+     <file src="build\Droid\Screenmedia.JazzHands.Core.dll" target="lib\MonoAndroid10\Screenmedia.JazzHands.Core.dll" />
+     <file src="build\Droid\Screenmedia.JazzHands.Droid.dll" target="lib\MonoAndroid10\Screenmedia.JazzHands.Droid.dll" />
+
+	 <!--Xamarin.iOS Unified-->
+     <file src="build\Droid\Screenmedia.JazzHands.Core.dll" target="lib\Xamarin.iOS10\Screenmedia.JazzHands.Core.dll" />
+     <file src="build\Droid\Screenmedia.JazzHands.Touch.dll" target="lib\Xamarin.iOS10\Screenmedia.JazzHands.Touch.dll" />
   </files>
 </package>

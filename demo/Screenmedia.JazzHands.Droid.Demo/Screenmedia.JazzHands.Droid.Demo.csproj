@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="Screenmedia.JazzHands.Core">
+      <HintPath>..\..\build\Droid\Screenmedia.JazzHands.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Screenmedia.JazzHands.Droid">
+      <HintPath>..\..\build\Droid\Screenmedia.JazzHands.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

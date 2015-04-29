@@ -98,6 +98,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Screenmedia.JazzHands.Core">
+      <HintPath>..\..\build\Touch\Screenmedia.JazzHands.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Screenmedia.JazzHands.Touch">
+      <HintPath>..\..\build\Touch\Screenmedia.JazzHands.Touch.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />

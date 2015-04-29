@@ -3,6 +3,8 @@ MDTOOL ?= /Applications/Xamarin\ Studio.app/Contents/MacOS/mdtool
 .PHONY: all clean
 
 package: all
+#	mono nuget/NuGet.exe pack ./Screenmedia.JazzHands.nuspec
+#	mv Screenmedia.JazzHands*.nupkg ./build/
 
 all:
 	$(MDTOOL) build -t:Clean -c:Release "Screenmedia.JazzHands.sln"

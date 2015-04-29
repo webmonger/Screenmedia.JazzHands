@@ -1,0 +1,35 @@
+%YAML 1.2
+---
+name: JazzHands keyframe animation 
+id: jazzhands
+publisher: Screenmedia
+summary: Jazz Hands is a keyframe animation framework for both iOS and Android that allows you to create user controlled animations.
+getting-started: GettingStarted.md
+details: Details.md
+screenshots: 
+  - screenshots/screenshot1.png
+  - screenshots/screenshot2.png
+  - screenshots/screenshot3.png
+license: License.md
+icons: 
+  - icons/IFTTT-Screenmedia-JazzHands_128x128.png
+  - icons/IFTTT-Screenmedia-JazzHands_512x512.png
+
+samples: 
+  - name: "iOS Sample"
+    path: ../demo/Screenmedia.JazzHands.Touch.Demo.sln
+    configuration: "Release|iPhone"
+    nobuild: true
+  - name: "Android Sample"
+    path: ../demo/Screenmedia.JazzHands.Droid.Demo.sln
+    configuration: "Release"
+    nobuild: true
+publisher-url: http://www.screenmedia.co.uk
+libraries:
+  ios-unified: 
+    - ../build/Touch/Screenmedia.JazzHands.Core.dll
+    - ../build/Touch/Screenmedia.JazzHands.Touch.dll
+  android: 
+    - ../build/Droid/Screenmedia.JazzHands.Core.dll
+    - ../build/Droid/Screenmedia.JazzHands.Droid.dll
+version: 2.0.0
