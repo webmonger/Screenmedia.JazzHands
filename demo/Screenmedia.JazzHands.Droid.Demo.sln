@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Droid.Demo", "..\Screenmedia.JazzHands.Droid.Demo\Screenmedia.JazzHands.Droid.Demo.csproj", "{12DDE312-AFFD-4152-B302-D70DB5D46191}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.JazzHands.Droid.Demo", "Screenmedia.JazzHands.Droid.Demo\Screenmedia.JazzHands.Droid.Demo.csproj", "{12DDE312-AFFD-4152-B302-D70DB5D46191}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
