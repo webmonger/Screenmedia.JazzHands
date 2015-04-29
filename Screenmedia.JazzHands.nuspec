@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>2.0</version>
+    <authors>Jon Carlos</authors>
+    <owners>Jon Carlos</owners>
+    <licenseUrl>https://github.com/webmonger/Screenmedia.JazzHands/blob/master/Licence</licenseUrl>
+    <projectUrl>https://github.com/webmonger/Screenmedia.JazzHands</projectUrl>
+    <id>Screenmedia.JazzHands</id>
+    <title>Screenmedia.JazzHands</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Jazz Hands is a keyframe animation framework for both iOS and Android that allows you to create user controlled animations.</description>
+    <summary>Add this library to both your iOS and Android Xamarin projects an create awesome keyframe animations in code. The core of this library was a port to C# from objective-c for iOS and we implemented Android as a new feature for version 2.0</summary>
+    <copyright>Copyright Jon Carlos © 2015</copyright>
+  </metadata>
+
+  <files>
+    <file src="build/**/*.*" target="lib" />
+  </files>
+</package>
