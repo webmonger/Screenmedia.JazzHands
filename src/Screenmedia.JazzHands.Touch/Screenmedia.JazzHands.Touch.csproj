@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Screenmedia.JazzHands.Touch</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Touch</AssemblyName>
+    <AssemblyName>Screenmedia.JazzHands.Touch</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

@@ -14,7 +14,7 @@
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Screenmedia.JazzHands.Droid.Demo</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -59,14 +59,4 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Screenmedia.JazzHands.Droid\Screenmedia.JazzHands.Droid.csproj">
-      <Project>{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}</Project>
-      <Name>Screenmedia.JazzHands.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Screenmedia.JazzHands.Core\Screenmedia.JazzHands.Core.csproj">
-      <Project>{47C7D9BF-4A91-4165-AE02-1B19566761F9}</Project>
-      <Name>Screenmedia.JazzHands.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
