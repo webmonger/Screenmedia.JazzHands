@@ -1,10 +1,10 @@
 # Getting Started
 First, make sure monotouch is included in your project, then install the component to add JazzHands.
 
-Add the namespace Screenmedia.IFTTT.JazzHands to your UIViewController.
+Add the namespace Screenmedia.JazzHands to your UIViewController.
 
 ```
-using Screenmedia.IFTTT.JazzHands;
+using Screenmedia.JazzHands;
 ```
 
 Note: Don't use Autolayout with your view as it wont work.

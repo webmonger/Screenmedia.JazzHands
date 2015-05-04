@@ -9,18 +9,18 @@
     <id>Screenmedia.JazzHands</id>
     <title>Screenmedia.JazzHands</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Jazz Hands is a keyframe animation framework for both iOS and Android that allows you to create user controlled animations.</description>
-    <summary>Add this library to both your iOS and Android Xamarin projects an create awesome keyframe animations in code. The core of this library was a port to C# from objective-c for iOS and we implemented Android as a new feature for version 2.0</summary>
-    <copyright>Copyright Jon Carlos © 2015</copyright>
+    <description>JazzHands is a keyframe animation framework for both iOS and Android that allows you to create user controlled animations.</description>
+    <summary>Add this library to both your iOS and Android Xamarin projects and create awesome keyframe animations in code. The core of this library was a port to C# from objective-c for iOS and we implemented Android as a new feature for version 2.0</summary>
+    <copyright>Copyright Screenmedia © 2015</copyright>
   </metadata>
 
   <files>
      <!--Xamarin.Android-->
-     <file src="build\Droid\Screenmedia.JazzHands.Core.dll" target="lib\MonoAndroid10\Screenmedia.JazzHands.Core.dll" />
-     <file src="build\Droid\Screenmedia.JazzHands.Droid.dll" target="lib\MonoAndroid10\Screenmedia.JazzHands.Droid.dll" />
+     <file src="build/Droid/Screenmedia.JazzHands.Core.dll" target="./lib/MonoAndroid10/Screenmedia.JazzHands.Core.dll" />
+     <file src="build/Droid/Screenmedia.JazzHands.Droid.dll" target="./lib/MonoAndroid10/Screenmedia.JazzHands.Droid.dll" />
 
 	 <!--Xamarin.iOS Unified-->
-     <file src="build\Droid\Screenmedia.JazzHands.Core.dll" target="lib\Xamarin.iOS10\Screenmedia.JazzHands.Core.dll" />
-     <file src="build\Droid\Screenmedia.JazzHands.Touch.dll" target="lib\Xamarin.iOS10\Screenmedia.JazzHands.Touch.dll" />
+     <file src="build/Touch/Screenmedia.JazzHands.Core.dll" target="./lib/Xamarin.iOS10/Screenmedia.JazzHands.Core.dll" />
+     <file src="build/Touch/Screenmedia.JazzHands.Touch.dll" target="./lib/Xamarin.iOS10/Screenmedia.JazzHands.Touch.dll" />
   </files>
 </package>

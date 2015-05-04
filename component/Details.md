@@ -1,4 +1,4 @@
-# JazzHands ported to C# by IFTTT & Screenmedia
+# JazzHands for iOS and Android ported to C# by Screenmedia
 
 Jazz Hands is a simple keyframe-based animation framework for UIKit.
 Animations can be controlled via gestures, scroll views, KVO, or ReactiveCocoa.
@@ -13,7 +13,7 @@ If you use this library and would like to be featured here please let us know.
 
 Check out the demo app to see a simple demonstration of moving, resizing, fading, and hiding views in a scrolling app intro.
 
-Download and install the component from the Component store or download the source from [GitHub](https://github.com/webmonger/JazzHands)
+Download and install the component from the Component store or download the source from [GitHub](https://github.com/webmonger/Screenmedia.JazzHands)
 
 ##Installation
 
@@ -23,10 +23,10 @@ It's recommended that you install from the Xamarin Component Store, alternativel
 
 First, make sure monotouch is included in your project, then install the component to add JazzHands.
 
-Add the namespace Screenmedia.IFTTT.JazzHands to your UIViewController.
+Add the namespace Screenmedia.JazzHands to your UIViewController.
 
 ```
-using Screenmedia.IFTTT.JazzHands;
+using Screenmedia.JazzHands;
 ```
 
 Note: Don't use Autolayout with your view as it wont work.
@@ -84,11 +84,11 @@ Jazz Hands supports several types of animations:
 
 ##Source
 
-The source for the project can be found on [GitHub](https://github.com/webmonger/JazzHands)
+The source for the project can be found on [GitHub](https://github.com/webmonger/Screenmedia.JazzHands)
 
 ###F Sharp
 
-There is an f# version of the demo being worked on at the moment and we'll release it as soon as possible. In the meentime if you want to see where we are at or if you'd like to help please checkout the code on [Github](https://github.com/webmonger/JazzHands/tree/master/JazzHandsCSharp/Screenmedia.IFTTT.JazzHandsFSharpDemo)
+There is an f# version of the demo being worked on at the moment and we'll release it as soon as possible. In the meentime if you want to see where we are at or if you'd like to help please checkout the code on [Github](https://github.com/webmonger/Screenmedia.JazzHands/tree/master/JazzHandsCSharp/Screenmedia.IFTTT.JazzHandsFSharpDemo)
 
 ## Notes
 

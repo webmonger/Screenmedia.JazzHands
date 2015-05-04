@@ -1,10 +1,10 @@
 MDTOOL ?= /Applications/Xamarin\ Studio.app/Contents/MacOS/mdtool
 
-.PHONY: all clean
+XAMARIN_COMPONENT ?= component/xamarin-component.exe
+# Path to mono, which by default should be on your PATH.
+MONO ?= mono
 
-package: all
-#	mono nuget/NuGet.exe pack ./Screenmedia.JazzHands.nuspec
-#	mv Screenmedia.JazzHands*.nupkg ./build/
+.PHONY: all component clean
 
 all:
 	$(MDTOOL) build -t:Clean -c:Release "Screenmedia.JazzHands.sln"
@@ -15,6 +15,9 @@ all:
 	mv ./src/Screenmedia.JazzHands.Droid/bin/Release/* ./build/Droid
 	mkdir -p ./build/Touch
 	mv ./src/Screenmedia.JazzHands.Touch/bin/Release/* ./build/Touch
+	$(MONO) $(XAMARIN_COMPONENT) package component
+	mono .nuget/NuGet.exe pack ./Screenmedia.JazzHands.nuspec
+#	mv Screenmedia.JazzHands*.nupkg ./build/
 
 clean:
 	$(MDTOOL) build -t:Clean Screenmedia.JazzHands.sln
