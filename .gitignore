@@ -5,6 +5,7 @@
 obj
 bin
 test-results
+build
 
 # VS sometimes writes these for no apparent reason
 _UpgradeReport_Files
