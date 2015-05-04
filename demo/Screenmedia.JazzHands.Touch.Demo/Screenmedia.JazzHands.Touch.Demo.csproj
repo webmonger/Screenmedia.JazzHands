@@ -98,6 +98,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Screenmedia.JazzHands.Core">
+      <HintPath>..\..\build\Touch\Screenmedia.JazzHands.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Screenmedia.JazzHands.Touch">
+      <HintPath>..\..\build\Touch\Screenmedia.JazzHands.Touch.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -119,14 +125,4 @@
     <Compile Include="JHViewController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Screenmedia.JazzHands.Core\Screenmedia.JazzHands.Core.csproj">
-      <Project>{47C7D9BF-4A91-4165-AE02-1B19566761F9}</Project>
-      <Name>Screenmedia.JazzHands.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Screenmedia.JazzHands.Touch\Screenmedia.JazzHands.Touch.csproj">
-      <Project>{BF7960BF-6041-4533-88D6-36286D7459D5}</Project>
-      <Name>Screenmedia.JazzHands.Touch</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

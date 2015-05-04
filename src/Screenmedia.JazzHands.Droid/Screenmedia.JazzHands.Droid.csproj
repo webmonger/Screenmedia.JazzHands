@@ -4,18 +4,16 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{12DDE312-AFFD-4152-B302-D70DB5D46191}</ProjectGuid>
+    <ProjectGuid>{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Screenmedia.JazzHands.Droid.Demo</RootNamespace>
+    <RootNamespace>Screenmedia.JazzHands.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
-    <AssemblyName>Screenmedia.JazzHands.Droid.Demo</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AssemblyName>Screenmedia.JazzHands.Droid</AssemblyName>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,26 +42,26 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AlphaAnimation.cs" />
+    <Compile Include="AngleAnimation.cs" />
+    <Compile Include="AnimationFrame.cs" />
+    <Compile Include="Animator.cs" />
+    <Compile Include="AttributeAnimation.cs" />
+    <Compile Include="ColorAnimation.cs" />
+    <Compile Include="FrameAnimation.cs" />
+    <Compile Include="HideAnimation.cs" />
+    <Compile Include="JazzHandsHorizontalScrollView.cs" />
+    <Compile Include="ScaleAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Screenmedia.JazzHands.Droid\Screenmedia.JazzHands.Droid.csproj">
-      <Project>{1F123CC4-2809-4DBC-8F63-B259C51C9D2F}</Project>
-      <Name>Screenmedia.JazzHands.Droid</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Screenmedia.JazzHands.Core\Screenmedia.JazzHands.Core.csproj">
       <Project>{47C7D9BF-4A91-4165-AE02-1B19566761F9}</Project>
       <Name>Screenmedia.JazzHands.Core</Name>
